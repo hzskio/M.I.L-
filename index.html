@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 16: Manipulative Information and Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+<strong>Week 16 · Media and Information Literacy</strong>
+<nav aria-label="Sections"><a href="#idea">Core idea</a><a href="#types">Types</a><a href="#design">Design</a><a href="#lab">Lab</a><a href="#select">Selection</a><a href="#plan">Webinar</a><a href="#practice">Practice</a><a href="#challenge">Challenge</a></nav>
+<div class="xp" aria-live="polite"><span id="lvl">Passive Viewer</span><div class="bar"><i id="barfill"></i></div><b><span id="pts">0</span> pts</b></div>
+</header>
+
+<main>
+<section class="hero">
+<div>
+<span class="badge">Week 16</span>
+<h1>Manipulative Information and Media</h1>
+<p class="lead">Interactive media lets users click, choose, answer, move, or control content. Think of it as a conversation with media: you do something, the system responds, and you decide what to do next.</p>
+<p><strong>Essential question:</strong> How can interactive media help audiences participate, respond, and learn, not just click for the sake of clicking?</p>
+<p class="note">Play along: every correct answer earns points, fires confetti, and levels you up.</p>
+</div>
+<div class="cycle" aria-live="polite">
+<h2 style="font-size:1.3rem">Try the interaction cycle</h2>
+<ol id="cycle">
+<li class="on"><b>1. User action</b>clicks, types, chooses, drags</li>
+<li><b>2. System response</b>changes screen or records input</li>
+<li><b>3. Feedback</b>shows result, score, confirmation, or new information</li>
+<li><b>4. Next choice</b>user continues, revises, or stops</li>
+</ol>
+<p id="cycleEx">In a quiz, you choose an answer.</p>
+<button class="btn" id="cycleBtn">Do the next step</button>
+</div>
+</section>
+
+<section id="targets">
+<h2>Learning targets</h2>
+<div class="grid">
+<div class="panel"><h3>Identify</h3><p>Recognize common types and characteristics of manipulative information and media.</p></div>
+<div class="panel"><h3>Explain</h3><p>Explain why selection criteria and design principles affect usability and learning.</p></div>
+<div class="panel"><h3>Apply</h3><p>Choose and evaluate an interactive tool for a webinar or class activity.</p></div>
+</div>
+</section>
+
+<section id="idea">
+<h2>Core idea: passive vs. manipulative media</h2>
+<p>The key difference is whether the audience can influence what happens next. Ask: can the user click, type, vote, choose, drag, submit, zoom, or explore?</p>
+<div class="two">
+<div class="panel"><h3>Passive media</h3><p>The audience mainly receives the message. Examples: printed poster, regular photo, prerecorded lecture, radio broadcast.</p></div>
+<div class="panel"><h3>Manipulative / interactive media</h3><p>The audience performs an action and the media changes, responds, records, or reveals something. Examples: poll, form, quiz, interactive map, simulation.</p></div>
+</div>
+<div class="panel">
+<h3>Warm-up: which actions make you a participant?</h3>
+<div id="warm"></div>
+<p class="fb" id="warmFb"></p>
+</div>
+</section>
+
+<section id="types">
+<h2>Common types of manipulative media</h2>
+<p>Different interactive tools are designed for different goals. Pick a type to see its purpose.</p>
+<div class="panel">
+<div class="tabs" role="tablist" id="typeTabs"></div>
+<div id="typeBody" role="tabpanel" aria-live="polite"></div>
+</div>
+<h3 style="margin-top:2rem">Where students encounter it</h3>
+<div class="grid">
+<div class="panel"><h3>School</h3><p>LMS quiz, attendance form, class poll, interactive module</p></div>
+<div class="panel"><h3>Social media</h3><p>Story polls, reaction buttons, Q&amp;A stickers, live chat</p></div>
+<div class="panel"><h3>Community</h3><p>Online appointment form, public-service portal, interactive map</p></div>
+<div class="panel"><h3>Shopping / services</h3><p>Filters, booking calendars, order customization, ratings</p></div>
+</div>
+<div class="note">Interactivity is not limited to games. It appears anywhere the user can influence the content or process.</div>
+</section>
+
+<section id="design">
+<h2>What makes interactive media effective</h2>
+<p>Good interactivity is easy to use and connected to a clear purpose.</p>
+<div id="chips"></div>
+<div class="note" id="chipInfo">Tap a characteristic to see what it means.</div>
+<div class="note">"Engaging" does not mean "full of effects." It means the interaction helps the audience think or act.</div>
+<h3 style="margin-top:2rem">Design principles</h3>
+<div class="grid">
+<div class="panel"><h3>Contrast</h3><p>Make important buttons and questions stand out.<br><em>Bad:</em> gray button on gray background.<br><em>Better:</em> clear visual difference.</p></div>
+<div class="panel"><h3>Alignment</h3><p>Keep text, choices, and buttons organized.<br><em>Bad:</em> choices scattered randomly.<br><em>Better:</em> choices lined up.</p></div>
+<div class="panel"><h3>Repetition</h3><p>Use consistent colors, fonts, and labels.<br><em>Bad:</em> every screen looks different.<br><em>Better:</em> same button style.</p></div>
+<div class="panel"><h3>Proximity</h3><p>Place related instructions and controls together.<br><em>Bad:</em> directions far from question.<br><em>Better:</em> directions beside task.</p></div>
+</div>
+<p style="margin-top:1rem">Also check readability and simple navigation.</p>
+</section>
+
+<section id="lab">
+<h2>Design lab: fix this poll</h2>
+<p>This poll breaks every design principle. Switch each fix on and watch it improve.</p>
+<div class="panel">
+<div class="tabs" id="labT"></div>
+<div class="mock" id="mock">
+<p class="mq">Which action should come FIRST when you see suspicious online news?</p>
+<div class="mopts"><span class="mbtn">A. Share immediately</span><span class="mbtn">B. Check the source</span><span class="mbtn">C. Ignore all news</span><span class="mbtn">D. Comment without reading</span></div>
+<p class="mdir">Pick one answer.</p>
+</div>
+<p class="fb" id="labFb"></p>
+</div>
+</section>
+
+<section id="select">
+<h2>Selection criteria: should we use this tool?</h2>
+<p>Before choosing a platform or activity, check whether it fits the audience and purpose.</p>
+<div class="panel">
+<h3>Case: a webinar poll asks students to enter their full home address before voting. Which criterion is the biggest concern?</h3>
+<div class="crit" id="crit"></div>
+<p class="fb" id="critFb"></p>
+</div>
+<div class="panel">
+<h3>Weak poll vs. improved poll</h3>
+<p>The same topic becomes easier to answer through better wording and design.</p>
+<button class="btn alt" id="pollBtn" aria-pressed="false">Show improved version</button>
+<div class="panel weak" id="pollBox" style="margin-top:1rem"></div>
+</div>
+</section>
+
+<section id="plan">
+<h2>Planning a webinar interaction</h2>
+<div class="grid">
+<div class="panel"><h3>Before the discussion</h3><p>Use a poll to check prior knowledge. <em>"Which source do you trust most for emergency information?"</em> Purpose: reveal assumptions before teaching.</p></div>
+<div class="panel"><h3>During the discussion</h3><p>Use a quick quiz or chat prompt. <em>"Which design principle is missing in this slide?"</em> Purpose: check understanding while teaching.</p></div>
+<div class="panel"><h3>After the discussion</h3><p>Use a reflection form or Q&amp;A. <em>"What will you change in your own media output?"</em> Purpose: connect learning to action.</p></div>
+</div>
+<p style="margin-top:1rem">The same tool can serve different purposes depending on when and why it is used.</p>
+<div class="panel">
+<h3>Five-step planning process</h3>
+<ol class="steps">
+<li><div><b>Choose.</b> Pick poll, quiz, Q&amp;A, form, or reflection.</div></li>
+<li><div><b>Write.</b> Create one clear instruction and focused question.</div></li>
+<li><div><b>Check.</b> Review relevance, clarity, usability, accessibility, and privacy.</div></li>
+<li><div><b>Test.</b> Open the link or feature before presenting.</div></li>
+<li><div><b>Use results.</b> Discuss what the responses mean. Do not just collect them.</div></li>
+</ol>
+</div>
+</section>
+
+<section id="practice">
+<h2>Guided practice: choose the best tool</h2>
+<p>For each situation, choose the interaction that best matches the goal.</p>
+<div class="panel" id="prac"></div>
+</section>
+
+<section id="challenge">
+<h2>Final challenge</h2>
+<p>Five questions. Earn a badge.</p>
+<div class="panel" id="quiz"></div>
+</section>
+
+<section id="synth">
+<h2>Lesson synthesis</h2>
+<div class="grid">
+<div class="panel"><h3>Manipulative media</h3><p>lets users control, respond, choose, or explore.</p></div>
+<div class="panel"><h3>Good interaction</h3><p>has a clear purpose and gives useful feedback.</p></div>
+<div class="panel"><h3>Good selection</h3><p>checks relevance, clarity, accuracy, usability, accessibility, and privacy.</p></div>
+<div class="panel"><h3>Good design</h3><p>makes the next action easy to see and understand.</p></div>
+</div>
+</section>
+</main>
+
+<footer>
+<h2>Group 8</h2>
+<ul class="members">
+<li>Mohd. Sharif Mohd. Ariffin</li>
+<li>Chelsea Hernandez</li>
+<li>Ron Andrei Cauba</li>
+<li>Rhianne Del Rosario</li>
+<li>Ferwen Martin</li>
+</ul>
+<p class="sub">Submitted to Mr. Isaiah Diaz</p>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+
+/* Interaction cycle */
+const steps=[...document.querySelectorAll('#cycle li')];
+const ex=["In a quiz, you choose an answer.","The system checks it.","You see a score and explanation.","You decide what to review."];
+let ci=0;
+$('#cycleBtn').onclick=()=>{ci=(ci+1)%4;steps.forEach((l,i)=>l.classList.toggle('on',i===ci));$('#cycleEx').textContent=ex[ci];$('#cycleBtn').textContent=ci===3?'Start again':'Do the next step'};
+
+/* Warm-up */
+const warm=[["Watching a prerecorded video","Passive"],["Voting in an Instagram poll","Interactive"],["Reading a poster","Passive"],["Choosing a route on Google Maps","Interactive"],["Answering an LMS quiz","Interactive"],["Listening to a podcast","Passive"]];
+let wDone=0;
+warm.forEach(([t,a])=>{
+  const d=document.createElement('div');d.className='item';
+  d.innerHTML='<span>'+t+'</span><span class="opts"></span>';
+  ['Passive','Interactive'].forEach(o=>{
+    const b=document.createElement('button');b.textContent=o;
+    b.onclick=e=>{
+      const bs=d.querySelectorAll('button');bs.forEach(x=>x.disabled=true);
+      b.classList.add(o===a?'right':'wrong');if(o===a)award(10,e);
+      if(o!==a)[...bs].find(x=>x.textContent===a).classList.add('right');
+      if(++wDone===warm.length)$('#warmFb').textContent='What changed when you became interactive? The media responded to you.';
+    };
+    d.querySelector('.opts').appendChild(b);
+  });
+  $('#warm').appendChild(d);
+});
+
+/* Types */
+const types=[["Poll","Collect a quick opinion or vote.","“Which issue should we discuss first?”"],["Quiz","Check understanding and give feedback.","A 5-item concept check."],["Form","Collect detailed responses or requests.","A registration or reflection form."],["Interactive map","Explore places, routes, or data.","A disaster-risk map."],["Simulation","Practice decisions and see consequences.","A budgeting or science simulation."],["Clickable webpage","Navigate through menus, buttons, links, and embedded tools.","A webinar landing page."]];
+const tabs=$('#typeTabs');
+function showType(i){
+  [...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',j===i));
+  $('#typeBody').innerHTML='<h3>'+types[i][0]+'</h3><p><b>Purpose:</b> '+types[i][1]+'</p><p><b>Example:</b> '+types[i][2]+'</p>';
+}
+types.forEach((t,i)=>{const b=document.createElement('button');b.role='tab';b.textContent=t[0];b.onclick=()=>showType(i);tabs.appendChild(b)});
+showType(0);
+
+/* Selection criteria */
+const crit=[["Relevance","Does it connect to the topic and objective?"],["Clarity","Are instructions short and easy to follow?"],["Accuracy","Is the information correct and reliable?"],["Usability","Can students complete it without confusion?"],["Accessibility","Can different learners participate?"],["Privacy","Does it avoid unnecessary personal data?"]];
+crit.forEach(([n,q])=>{
+  const b=document.createElement('button');b.setAttribute('aria-pressed','false');b.innerHTML='<b>'+n+'</b><br><small>'+q+'</small>';
+  b.onclick=ev=>{
+    [...$('#crit').children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');
+    const f=$('#critFb');
+    if(n==='Privacy'){if(!crit.done){crit.done=1;award(20,ev)}f.style.color='var(--ok)';f.textContent='Correct. A full home address is unnecessary personal data for a simple vote.'}
+    else{f.style.color='var(--coral)';f.textContent=n+' matters, but it is not the biggest concern here. Look at what data the poll collects.'}
+  };
+  $('#crit').appendChild(b);
+});
+
+/* Weak vs improved poll */
+const weak='<h3>Weak version</h3><p>“What do you think about everything we discussed today?”</p><ul><li>Too broad</li><li>No clear choice</li><li>Hard to interpret responses</li><li>Does not measure a specific idea</li></ul>';
+const imp='<h3>Improved version</h3><p>“Which action should come FIRST when you see suspicious online news?”</p><ul style="list-style:upper-alpha"><li>Share immediately</li><li>Check the source</li><li>Ignore all news</li><li>Comment without reading</li></ul><p><b>Why it is better:</b> specific task, clear options, directly connected to the lesson.</p>';
+let imped=false;const pb=$('#pollBox');pb.innerHTML=weak;
+$('#pollBtn').onclick=e=>{imped=!imped;pb.innerHTML=imped?imp:weak;pb.className='panel '+(imped?'good':'weak');e.target.setAttribute('aria-pressed',imped);e.target.textContent=imped?'Show weak version':'Show improved version'};
+
+/* Guided practice */
+const names=["Poll","Form","Simulation","Quiz"];
+const prac=[["You need a fast yes/no opinion from 100 viewers.","Poll"],["You need names, sections, and detailed responses.","Form"],["You want students to practice choices with consequences.","Simulation"],["You want to check if the audience understood three key ideas.","Quiz"]];
+prac.forEach(([q,a],i)=>{
+  const d=document.createElement('div');d.className='item';
+  d.innerHTML='<span style="flex:1 1 280px">'+(i+1)+'. '+q+'</span><span class="opts"></span>';
+  names.forEach(n=>{
+    const b=document.createElement('button');b.textContent=n;
+    b.onclick=e=>{const bs=d.querySelectorAll('button');bs.forEach(x=>x.disabled=true);b.classList.add(n===a?'right':'wrong');if(n===a)award(10,e);if(n!==a)[...bs].find(x=>x.textContent===a).classList.add('right')};
+    d.querySelector('.opts').appendChild(b);
+  });
+  $('#prac').appendChild(d);
+});
+
+/* Points, levels, confetti */
+const MAX=215,LV=[[0,'Passive Viewer'],[25,'Participant'],[55,'Interactor'],[85,'Media Master']];
+let pts=0,lvIdx=0;
+function burst(x,y){for(let i=0;i<16;i++){const e=document.createElement('i');e.className='cf';e.style.left=x+'px';e.style.top=y+'px';e.style.setProperty('--dx',(Math.random()*260-130)+'px');e.style.setProperty('--dy',(Math.random()*-200-30)+'px');e.style.background=['#ffc65c','#7fe3ec','#ff9aa9','#7bf0b0','#c4a8ff'][i%5];document.body.appendChild(e);setTimeout(()=>e.remove(),950)}}
+function toast(t){const o=document.createElement('div');o.className='toast';o.textContent=t;document.body.appendChild(o);setTimeout(()=>o.remove(),2600)}
+function award(n,e){
+  pts=Math.min(MAX,pts+n);
+  const pct=Math.round(pts/MAX*100);
+  $('#pts').textContent=pts;$('#barfill').style.width=pct+'%';
+  let i=0;LV.forEach((l,j)=>{if(pct>=l[0])i=j});
+  $('#lvl').textContent=LV[i][1];
+  if(i>lvIdx){lvIdx=i;toast('Level up: '+LV[i][1])}
+  if(e&&e.currentTarget){const r=e.currentTarget.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2)}
+}
+
+/* Tappable characteristics */
+const chs=[["Clear action","Users immediately know what to do."],["Purposeful","The interaction supports the lesson or message."],["Feedback","The system gives a result, confirmation, or response."],["User control","Users can choose, navigate, or answer."],["Accessible","Different learners can participate fairly."],["Engaging","Participation helps attention and understanding. It does not mean “full of effects.”"]];
+chs.forEach(([n,d])=>{const b=document.createElement('button');b.className='chip';b.textContent=n;b.setAttribute('aria-pressed','false');
+  b.onclick=()=>{b.classList.add('seen');[...$('#chips').children].forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');$('#chipInfo').innerHTML='<b>'+n+':</b> '+d}
+  $('#chips').appendChild(b)});
+
+/* Design lab */
+const fixes=[["Contrast","c"],["Alignment","a"],["Repetition","r"],["Proximity","p"]];
+fixes.forEach(([n,c])=>{const b=document.createElement('button');b.textContent='Fix '+n.toLowerCase();b.setAttribute('aria-pressed','false');b.dataset.c=c;
+  b.onclick=e=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);b.setAttribute('aria-selected',on);$('#mock').classList.toggle(c,on);
+    if(on&&!b.dataset.paid){b.dataset.paid=1;award(5,e)}
+    const all=[...$('#labT').children].every(x=>x.getAttribute('aria-pressed')==='true');
+    $('#labFb').textContent=all?'Clean. Users know where to look, what to do, and what happens next.':''};
+  $('#labT').appendChild(b)});
+
+/* Final challenge */
+const QZ=[["Which one is manipulative media?",["Printed poster","Radio broadcast","Interactive disaster-risk map","Prerecorded lecture"],2],
+["In the interaction cycle, what comes right after the system response?",["Feedback","User action","Next choice","Nothing"],0],
+["A webinar poll asks for students' full home address. Which criterion is the biggest concern?",["Relevance","Privacy","Clarity","Accuracy"],1],
+["Which poll question is stronger?",["What do you think about everything we discussed today?","Which action should come FIRST when you see suspicious online news?"],1],
+["After collecting webinar poll results, what should you do?",["Close the poll","Discuss what the responses mean","Delete the responses","Hide the results"],1]];
+let qi=0,qs=0,qfirst=true;
+function renderQ(){
+  const box=$('#quiz');
+  if(qi>=QZ.length){
+    const b=qs===5?'Media Master':qs>=3?'Smart Interactor':'Keep practicing';
+    box.innerHTML='<h3>You scored '+qs+' / 5</h3><p>Badge: <b>'+b+'</b></p><button class="btn" id="qAgain">Play again</button>';
+    if(qs===5&&qfirst)burst(innerWidth/2,innerHeight/2);
+    $('#qAgain').onclick=()=>{qi=0;qs=0;qfirst=false;renderQ()};return}
+  const q=QZ[qi];
+  box.innerHTML='<p><b>Question '+(qi+1)+' of '+QZ.length+'</b></p><h3></h3><div id="qo"></div><p class="fb" id="qfb"></p>';
+  box.querySelector('h3').textContent=q[0];
+  q[1].forEach((t,i)=>{const b=document.createElement('button');b.className='qopt';b.textContent=t;
+    b.onclick=e=>{const all=[...$('#qo').children];all.forEach(x=>x.disabled=true);
+      const ok=i===q[2];b.classList.add(ok?'right':'wrong');if(!ok)all[q[2]].classList.add('right');
+      $('#qfb').textContent=ok?'Correct!':'Not quite. The right answer is highlighted.';
+      if(ok){qs++;if(qfirst)award(15,e)}
+      const n=document.createElement('button');n.className='btn';n.textContent=qi===QZ.length-1?'See my score':'Next question';n.onclick=()=>{qi++;renderQ()};box.appendChild(n);n.focus()};
+    $('#qo').appendChild(b)});
+}
+renderQ();
+</script>
+</body>
+</html>
